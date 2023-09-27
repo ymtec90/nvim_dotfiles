@@ -40,3 +40,6 @@ require("indent_blankline").setup({
     "IndentBlanklineIndent6",
   },
 })
+
+-- Attaches to every FileType mode
+require("colorizer").setup()
