@@ -4,9 +4,6 @@ lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
   lsp_zero.default_keymaps({ buffer = bufnr })
-  if client.server_capabilities.documentSymbolProvider then
-    require("nvim-navic").attach(client, bufnr)
-  end
 end)
 
 lsp_zero.set_sign_icons({
@@ -63,9 +60,3 @@ cmp.setup({
     ["<CR>"] = cmp.mapping.confirm({ select = false }),
   }),
 })
-
-local on_attach = function(_, _)
-  vim.keymap.set("n", "<leader>dd", require("telescope.builtin").lsp_references, {})
-end
-
-local navbuddy = require("nvim-navbuddy")

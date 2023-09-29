@@ -101,10 +101,6 @@ local plugins = {
     end,
   },
   {
-    "SmiteshP/nvim-navic",
-    dependencies = "neovim/nvim-lspconfig",
-  },
-  {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
     config = function()
@@ -132,21 +128,6 @@ local plugins = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
-    },
-  },
-  {
-    "SmiteshP/nvim-navbuddy",
-    dependencies = {
-      "neovim/nvim-lspconfig",
-      "SmiteshP/nvim-navic",
-      "MunifTanjim/nui.nvim",
-      "numToStr/Comment.nvim",      -- Optional
-      "nvim-telescope/telescope.nvim", -- Optional
-    },
-    opts = {
-      lsp = {
-        auto_attach = true,
-      },
     },
   },
 }
