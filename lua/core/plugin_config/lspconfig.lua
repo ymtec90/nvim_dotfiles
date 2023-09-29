@@ -67,3 +67,5 @@ cmp.setup({
 local on_attach = function(_, _)
   vim.keymap.set("n", "<leader>dd", require("telescope.builtin").lsp_references, {})
 end
+
+local navbuddy = require("nvim-navbuddy")

@@ -134,6 +134,21 @@ local plugins = {
       -- refer to the configuration section below
     },
   },
+  {
+    "SmiteshP/nvim-navbuddy",
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "SmiteshP/nvim-navic",
+      "MunifTanjim/nui.nvim",
+      "numToStr/Comment.nvim",      -- Optional
+      "nvim-telescope/telescope.nvim", -- Optional
+    },
+    opts = {
+      lsp = {
+        auto_attach = true,
+      },
+    },
+  },
 }
 
 local opts = {}
