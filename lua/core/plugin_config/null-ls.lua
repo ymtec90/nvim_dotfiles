@@ -8,8 +8,8 @@ local opts = {
     null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.djlint,
     null_ls.builtins.diagnostics.ruff,
-    null_ls.builtins.diagnostics.eslint,
     null_ls.builtins.diagnostics.djlint,
+    null_ls.builtins.diagnostics.tsserver,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

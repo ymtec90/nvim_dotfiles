@@ -21,6 +21,8 @@ vim.opt.expandtab = true
 
 vim.opt.termguicolors = true
 
+vim.opt.scrolloff = 10
+
 -- Mappings
 -- Normal Mode
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
@@ -69,3 +71,8 @@ function createAutoCommands()
 end
 
 createAutoCommands()
+
+-- Disable virtual_text since it's redundant due to lsp_lines.
+vim.diagnostic.config({
+  virtual_text = false,
+})

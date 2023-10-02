@@ -48,7 +48,7 @@ local plugins = {
     dependencies = { "nvim-tree/nvim-web-devicons", opt = true },
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     event = BufEnter,
     opts = function()
       return require("core.plugin_config.null-ls")
@@ -73,6 +73,13 @@ local plugins = {
         { "L3MON4D3/LuaSnip" },
       },
     },
+    { "rafamadriz/friendly-snippets" },
+    { "onsails/lspkind.nvim" },
+    { "hrsh7th/cmp-path" },
+    { "hrsh7th/cmp-buffer" },
+    { "hrsh7th/cmp-nvim-lsp-signature-help" },
+    { "hrsh7th/cmp-nvim-lua" },
+    { "hrsh7th/cmp-emoji" },
   },
   {
     "HiPhish/rainbow-delimiters.nvim",
@@ -81,7 +88,8 @@ local plugins = {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
-    event = "BufEnter",
+    main = "ibl",
+    opts = {},
   },
   {
     "j-hui/fidget.nvim",
@@ -129,6 +137,12 @@ local plugins = {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     },
+  },
+  {
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+      require("lsp_lines").setup()
+    end,
   },
 }
 
