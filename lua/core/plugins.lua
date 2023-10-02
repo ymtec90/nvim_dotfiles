@@ -49,7 +49,7 @@ local plugins = {
   },
   {
     "nvimtools/none-ls.nvim",
-    event = BufEnter,
+    event = "BufEnter",
     opts = function()
       return require("core.plugin_config.null-ls")
     end,
